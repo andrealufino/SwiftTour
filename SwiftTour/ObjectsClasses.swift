@@ -32,6 +32,16 @@ class ObjectClassExamples {
         var triangle = EquilateralTriangle(sideLength: 3.1, name: "Equilateral triangle")
         triangle.perimeter = 9.9
         println("[4]I'm an EquilateralTriangle object and I can calculate my side length based on my perimeter \n\(triangle.perimeter)")
+        
+        /* Classes with willSet/didSet features */
+        var triangleAndSquare = TriangleAndSquare(size: 10, name: "another test shape")
+        triangleAndSquare.square = Square(sideLength: 50, name: "larger square")
+        println("[5]I'm a function with the willSet/didSet feature \n    Triangle side length : \(triangleAndSquare.triangle.sideLength) \n    Square side length : \(triangleAndSquare.square.sideLength)")
+        
+        /* In class methods we have to specify the parameter name of the method when we call it (except 1st parameter) */
+        var counter = Counter()
+        counter.incrementBy(2, numberOfTimes: 7)
+        println("[6]Show that in methods, we need to specify the name of the parameter (except the 1st)\n\(counter.count)")
     }
 }
 
@@ -114,5 +124,32 @@ class EquilateralTriangle: NamedShape {
     /* Override superclass function */
     override func simpleDescription() -> String {
         return "An equilater triangle with sides of length \(sideLength)"
+    }
+}
+
+/* If you don't need to init a property, but still need to provide code that is run before and after setting new value, use willSet and didSet. */
+/* This class ensure that the side length of the triangle is always the same as the side length of the square */
+class TriangleAndSquare {
+    var triangle: EquilateralTriangle {
+    willSet {
+        square.sideLength = newValue.sideLength
+    }
+    }
+    var square: Square {
+    willSet {
+        triangle.sideLength = newValue.sideLength
+    }
+    }
+    init(size: Double, name: String) {
+        square = Square(sideLength: size, name: name)
+        triangle = EquilateralTriangle(sideLength: size, name: name)
+    }
+}
+
+/* Methods of classes have a difference from functions. In functions parameter names is used only within the function itself, in methods is used also in the method call */
+class Counter {
+    var count: Int = 0
+    func incrementBy(amount: Int, numberOfTimes times: Int) {
+        count += amount * times
     }
 }
