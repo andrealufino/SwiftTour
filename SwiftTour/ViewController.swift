@@ -14,20 +14,26 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        println()
+        println("PROCEDURES")
+        
         var procedureExamples = ProcedureExamples()
         procedureExamples.logProcedureExamples()
         
         println()
+        println("FUNCTIONS")
         
         var functionExamples = FunctionExamples()
         functionExamples.logFunctionExamples()
         
         println()
+        println("OBJECTS AND CLASSES")
         
         var objectClassExamples = ObjectClassExamples()
         objectClassExamples.logObjectClassesExamples()
         
         println()
+        println("ENUM AND STRUCTS")
         
         var _enumExamples = EnumStructExamples()
         _enumExamples.logEnumStructExamples()
