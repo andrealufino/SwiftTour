@@ -17,11 +17,22 @@ class ViewController: UIViewController {
         var procedureExamples = ProcedureExamples()
         procedureExamples.logProcedureExamples()
         
+        println()
+        
         var functionExamples = FunctionExamples()
         functionExamples.logFunctionExamples()
         
+        println()
+        
         var objectClassExamples = ObjectClassExamples()
         objectClassExamples.logObjectClassesExamples()
+        
+        println()
+        
+        var _enumExamples = EnumStructExamples()
+        _enumExamples.logEnumStructExamples()
+        
+        println()
         
     }
     

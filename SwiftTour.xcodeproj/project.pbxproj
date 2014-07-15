@@ -15,6 +15,7 @@
 		873C931719754046005F23FB /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C931619754046005F23FB /* Functions.swift */; };
 		873C9319197544E3005F23FB /* Procedures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C9318197544E3005F23FB /* Procedures.swift */; };
 		873C931B1975470E005F23FB /* ObjectsClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C931A1975470E005F23FB /* ObjectsClasses.swift */; };
+		873C93211975632A005F23FB /* EnumStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C93201975632A005F23FB /* EnumStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		873C931619754046005F23FB /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		873C9318197544E3005F23FB /* Procedures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Procedures.swift; sourceTree = "<group>"; };
 		873C931A1975470E005F23FB /* ObjectsClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectsClasses.swift; sourceTree = "<group>"; };
+		873C93201975632A005F23FB /* EnumStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +148,17 @@
 				873C931C19755AD4005F23FB /* Procedures */,
 				873C931D19755AE3005F23FB /* Functions */,
 				873C931E19755AEC005F23FB /* Objects and classes */,
+				873C932219756E55005F23FB /* Enum and structs */,
 			);
 			name = Tutorials;
+			sourceTree = "<group>";
+		};
+		873C932219756E55005F23FB /* Enum and structs */ = {
+			isa = PBXGroup;
+			children = (
+				873C93201975632A005F23FB /* EnumStruct.swift */,
+			);
+			name = "Enum and structs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +262,7 @@
 			files = (
 				8717E4F41974139000F5F351 /* ViewController.swift in Sources */,
 				8717E4F21974139000F5F351 /* AppDelegate.swift in Sources */,
+				873C93211975632A005F23FB /* EnumStruct.swift in Sources */,
 				873C931B1975470E005F23FB /* ObjectsClasses.swift in Sources */,
 				873C931719754046005F23FB /* Functions.swift in Sources */,
 				873C9319197544E3005F23FB /* Procedures.swift in Sources */,
